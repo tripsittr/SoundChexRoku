@@ -1,22 +1,17 @@
-# Issues — SoundChex for Roku
+# Issues — moved to the admin tracker
 
-`R-NN` numbering. **In progress → Open → Deferred → Done**; nothing deleted.
+Issue and to-do tracking for **every SoundChex repo** now lives in the database,
+managed from the SoundChex landing site's admin panel — not in this file.
 
-## Open
+- **Admin panel:** `/admin` on the SoundChex website → **Tracker**. Create, edit,
+  filter (by platform, status, type, repo) and publish items.
+- **From the console:** `php artisan track:issue` in the **SoundChexWebsite**
+  repo — interactive, or with flags (`--platform --type --status --repo --ref
+  --publish`).
 
-| ID | What | Notes |
-|----|------|-------|
-| R-01 | Channel scaffold | SceneGraph channel (`manifest`, main scene, `.brs`); sideload in developer mode. |
-| R-02 | Auth + browse | Profile picker + token auth; grid/details screens from `/api/v1/library`. |
-| R-03 | Playback | `roVideoPlayer` against the token-authed stream; resume + progress. |
-| R-04 | Publish | Roku developer channel; store submission/certification. |
+This repo's historical `Issues.md` was imported into the tracker (keyed on its
+original reference ids), and the full backlog is reproducible from
+`SoundChexWebsite/database/seeders/data/items.json`. Nothing was lost.
 
-## Deferred
-
-_(none yet)_
-
-## Done
-
-| ID | What | When | Notes |
-|----|------|------|-------|
-| R-00 | Repo + licence + docs | 2026-09-17 | Scaffold. |
+> **Workflow:** log new work as a tracker item *before* starting it — the same
+> discipline the Markdown tracker enforced, in the database now.
